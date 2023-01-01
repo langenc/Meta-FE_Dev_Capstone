@@ -1,26 +1,26 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import '../css/Nav.css';
 
 function Nav() {
   return (
-    <nav>
+    <nav className="nav">
+      <img src="../assets/logo.png" alt="Logo" className="logo" />
       <ul>
         <li>
-          <a href="/">Home</a>
+          <Link to="/">Home</Link>
         </li>
         <li>
-          <a href="/about">About</a>
+          <Link to="/about">About</Link>
         </li>
         <li>
-          <a href="/menu">Menu</a>
+          <Link to="/reservations">Reservations</Link>
         </li>
         <li>
-          <a href="/reservations">Reservations</a>
+          <Link to="/order-online">Order online</Link>
         </li>
         <li>
-          <a href="/order-online">Order online</a>
-        </li>
-        <li>
-          <a href="/login">Login</a>
+          <Link to="/login">Login</Link>
         </li>
       </ul>
     </nav>

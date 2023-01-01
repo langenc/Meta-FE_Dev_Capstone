@@ -1,0 +1,46 @@
+/* Horizontal grid */
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  height: 2000px;
+}
+.flex-item-1 {
+  flex: 2;
+}
+
+.flex-item-2 {
+  flex: 1;
+}
+
+.flex-item-3 {
+  flex: 3;
+}
+
+.flex-item-4 {
+  flex: 1;
+}
+
+/* Vertical grid */
+.vertical-flex-container {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+}
+.vertical-flex-item {
+  background-color: #eee;
+  border: 1px solid #ccc;
+  font-size: 18px;
+}
+.vertical-flex-item-center {
+  flex: 2;
+}
+.vertical-flex-item-border {
+  flex: 1;
+}
+.reserveButton {
+    color: #F4CE14;
+    height: 50px;
+    border-radius: 10px;
+    border: 0px;
+    background-color: #495E57;
+}
