@@ -11,3 +11,109 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/* Primary color */
+.primary {
+  color: #495E57;
+}
+
+/* Secondary color */
+.secondary {
+  color: #F4CE14;
+}
+
+/* Text styles */
+.text {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+}
+
+.text-large {
+  font-size: 20px;
+}
+
+.text-small {
+  font-size: 12px;
+}
+
+/* Button styles */
+.button {
+  background-color: #495E57;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #F4CE14;
+}
+
+/* Form styles */
+.form-control {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #495E57;
+}
+
+.form-control:focus {
+  border: 1px solid #F4CE14;
+}
+
+/* Headings */
+h1 {
+  font-size: 32px;
+  font-weight: bold;
+  color: #495E57;
+}
+
+h2 {
+  font-size: 28px;
+  font-weight: bold;
+  color: #495E57;
+}
+
+h3 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #495E57;
+}
+
+h4 {
+  font-size: 20px;
+  font-weight: bold;
+  color: #495E57;
+}
+
+h5 {
+  font-size: 16px;
+  font-weight: bold;
+  color: #495E57;
+}
+
+h6 {
+  font-size: 12px;
+  font-weight: bold;
+  color: #495E57;
+}
+
+/* Paragraph */
+p {
+  font-size: 16px;
+  color: #495E57;
+}
+
+/* Span */
+span {
+  font-size: 16px;
+  color: #495E57;
+}
+
+/* Navigation */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

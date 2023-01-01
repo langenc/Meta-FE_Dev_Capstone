@@ -1,9 +1,12 @@
-import React from 'react';
+import React from "react";
 
 function Main() {
   return (
-    <main>
-      <p>Welcome to my app!</p>
+    <main className="container">
+      <div className="row">Row 1</div>
+      <div className="row">Row 2</div>
+      <div className="row">Row 3</div>
+      <div className="row">Row 4</div>
     </main>
   );
 }
