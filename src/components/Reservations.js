@@ -1,6 +1,6 @@
 import React from "react";
 import BookingForm from "./BookingForm";
-import { useEffect, useReducer } from "react";
+import { useEffect, useReducer, useState } from "react";
 
 function bookingReducer(state, action) {
   switch (action.type) {
@@ -42,11 +42,17 @@ function Reservations() {
 
   function updateTimes(date) {
     // Update the availableTimes state based on the selected date
-    const newTimes = ["17:00", "18:00", "19:00", "20:00", "21:00", "22:00"];
-    dispatch({
-      type: "UPDATE_AVAILABLE_TIMES",
-      payload: newTimes,
-    });
+    const dateObj = new Date(date);
+    const formattedDate = dateObj.toISOString().substring(0, 10);
+    return fetch(`http://localhost:8080/get-times?date=${formattedDate}`)
+    .then((response) => response.json())
+    .then((times) => {
+      dispatch({
+        type: "UPDATE_AVAILABLE_TIMES",
+        payload: times,
+      });
+    })
+    .catch((error) => console.error(error));
   }
 
   return (

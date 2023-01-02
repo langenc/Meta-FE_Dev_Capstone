@@ -9,11 +9,11 @@ function BookingForm(props) {
 
   function handleDateChange(event) {
     setDate(event.target.value);
+    props.updateTimes(date);
   }
 
   function handleTimeChange(event) {
     setTime(event.target.value);
-    props.updateTimes(event.target.value);
   }
 
   function handleGuestsChange(event) {
