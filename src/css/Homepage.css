@@ -2,7 +2,7 @@
 .flex-container {
   display: flex;
   flex-direction: column;
-  height: 2000px;
+  height: 1500px;
 }
 .flex-item-1 {
   flex: 2;
@@ -25,10 +25,9 @@
   display: flex;
   flex-direction: row;
   height: 100%;
+  background-color: #495E57;
 }
 .vertical-flex-item {
-  background-color: #eee;
-  border: 1px solid #ccc;
   font-size: 18px;
 }
 .vertical-flex-item-center {
@@ -38,9 +37,24 @@
   flex: 1;
 }
 .reserveButton {
-    color: #F4CE14;
+    margin-top: 50px;
+    color: #495E57;
+    font-size: 18px;
+    font-weight: bold;
     height: 50px;
     border-radius: 10px;
     border: 0px;
-    background-color: #495E57;
+    background-color: #F4CE14;
+}
+.imgPasta {
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+  height: 100%;
+}
+.shortDescription {
+  color: black;
+}
+.vertical-flex-item-center > h4 {
+  color: black;
 }

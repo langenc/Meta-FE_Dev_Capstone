@@ -2,8 +2,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #495e57;
-  color: white;
+  background-color: rgba(200, 200, 200, 0.5);
+  color: #495E57;
   padding: 20px;
   height: 50px;
 }
@@ -20,15 +20,14 @@
 }
 
 .nav a {
-  color: white;
+  color: #495E57;
   text-decoration: none;
 }
 
 .nav a:hover {
   color: #f4ce14;
 }
-.nav .logo {
-  height: 50;
+.logo {
+  height: 50px;
   margin-right: 20px;
-  width: auto;
 }

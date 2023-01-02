@@ -1,5 +1,7 @@
 import React from "react";
 import "../css/Homepage.css";
+import imgPasta from "../assets/Pasta.png";
+import { Link } from 'react-router-dom';
 
 function Homepage() {
   return (
@@ -11,7 +13,7 @@ function Homepage() {
             <div className="vertical-flex-item vertical-flex-item-center">
               <h2>Little Lemon</h2>
               <h4>Chicago</h4>
-              <p>
+              <p className="shortDescription">
                 Welcome to Little Lemon, a cozy and charming restaurant
                 featuring delicious Italian-inspired dishes. Our menu includes a
                 variety of pasta, seafood, and meat dishes, as well as an
@@ -19,9 +21,13 @@ function Homepage() {
                 reservations for your convenience. Come visit us and experience
                 the taste of Italy at Little Lemon.
               </p>
-              <button className="reserveButton">Reserve a table</button>
+              <Link to="/reservations">
+                <button className="reserveButton">Reserve a table</button>
+              </Link>
             </div>
-            <div className="vertical-flex-item vertical-flex-item-center"></div>
+            <div className="vertical-flex-item vertical-flex-item-center">
+              <img src={imgPasta} alt="Pasta" className="imgPasta" />
+            </div>
             <div className="vertical-flex-item vertical-flex-item-border"></div>
           </div>
         </div>
