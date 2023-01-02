@@ -1,0 +1,18 @@
+/* Horizontal grid */
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  background-color: #495e57;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+.flex-item-1 {
+  flex: 1;
+}
+label {
+    color: white;
+}
+form {
+    margin-top: 50px;
+}

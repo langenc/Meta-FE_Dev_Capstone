@@ -7,6 +7,11 @@ function BookingForm(props) {
   const [guests, setGuests] = useState("");
   const [occasion, setOccasion] = useState("");
 
+  function handleSubmit(event) {
+    event.preventDefault();
+    // form submission logic goes here
+  }
+
   function handleDateChange(event) {
     setDate(event.target.value);
     props.updateTimes(date);
@@ -32,9 +37,10 @@ function BookingForm(props) {
         id="res-date"
         value={date}
         onChange={handleDateChange}
+        required
       />
       <label htmlFor="res-time">Choose time</label>
-      <select id="res-time" value={time} onChange={handleTimeChange}>
+      <select id="res-time" value={time} onChange={handleTimeChange} required>
         {props.availableTimes.map((availableTime) => (
           <option key={availableTime}>{availableTime}</option>
         ))}
@@ -48,9 +54,10 @@ function BookingForm(props) {
         id="guests"
         value={guests}
         onChange={handleGuestsChange}
+        required
       />
       <label htmlFor="occasion">Occasion</label>
-      <select id="occasion" value={occasion} onChange={handleOccasionChange}>
+      <select id="occasion" value={occasion} onChange={handleOccasionChange} required>
         <option>Birthday</option>
         <option>Anniversary</option>
       </select>

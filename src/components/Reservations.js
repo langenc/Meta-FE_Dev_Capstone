@@ -28,6 +28,9 @@ function Reservations() {
   function initializeTimes() {
     const today = new Date();
     const formattedDate = today.toISOString().substring(0, 10);
+
+    //Spring Boot webserver is developed and running local. All requests are fired there.
+
     return fetch(`http://localhost:8080/get-times?date=${formattedDate}`)
       .then((response) => response.json())
       .catch((error) => console.log(error));
@@ -44,6 +47,9 @@ function Reservations() {
     // Update the availableTimes state based on the selected date
     const dateObj = new Date(date);
     const formattedDate = dateObj.toISOString().substring(0, 10);
+
+    //Spring Boot webserver is developed and running local. All requests are fired there.
+
     return fetch(`http://localhost:8080/get-times?date=${formattedDate}`)
     .then((response) => response.json())
     .then((times) => {

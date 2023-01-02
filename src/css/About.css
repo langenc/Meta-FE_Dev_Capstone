@@ -1,0 +1,29 @@
+/* Vertical grid */
+.vertical-flex-container {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  background-color: #495e57;
+}
+.vertical-flex-item {
+  font-size: 18px;
+}
+.vertical-flex-item-center {
+  flex: 2;
+}
+.vertical-flex-item-border {
+  flex: 1;
+}
+.vertical-flex-item-center > h4 {
+  color: black;
+}
+.vertical-flex-item-center > p {
+    color: white;
+    padding-right: 25px;
+  }
+.restaurant {
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+    height: 100%;
+  }

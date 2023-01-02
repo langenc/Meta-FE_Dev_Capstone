@@ -54,6 +54,7 @@
 }
 .shortDescription {
   color: black;
+  padding-right: 20px;
 }
 .vertical-flex-item-center > h4 {
   color: black;
