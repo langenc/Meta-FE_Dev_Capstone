@@ -4,12 +4,29 @@ import "../css/BookingForm.css";
 function BookingForm(props) {
   const [date, setDate] = useState(new Date().toISOString().slice(0, 10));
   const [time, setTime] = useState("");
-  const [guests, setGuests] = useState("");
-  const [occasion, setOccasion] = useState("");
+  const [guests, setGuests] = useState("1");
+  const [occasion, setOccasion] = useState("Birthday");
 
   function handleSubmit(event) {
     event.preventDefault();
-    // form submission logic goes here
+    const formData = {
+      date: date,
+      time: time,
+      guests: guests,
+      occasion: occasion,
+    };
+
+    fetch("http://localhost:8080/book-table", {
+      method: "POST",
+      body: JSON.stringify(formData),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    })
+      .then((response) => response.json())
+      .then((response) => {
+        if(response) window.alert("Your booking was successful");
+      });
   }
 
   function handleDateChange(event) {
@@ -30,6 +47,8 @@ function BookingForm(props) {
   }
 
   return (
+    <div className="bookingForm-flex-container">
+    <div className="flex-item bookingForm-flex-item-1">
     <form style={{ display: "grid", maxWidth: "200px", gap: "20px" }}>
       <label htmlFor="res-date">Choose date</label>
       <input
@@ -57,12 +76,19 @@ function BookingForm(props) {
         required
       />
       <label htmlFor="occasion">Occasion</label>
-      <select id="occasion" value={occasion} onChange={handleOccasionChange} required>
+      <select
+        id="occasion"
+        value={occasion}
+        onChange={handleOccasionChange}
+        required
+      >
         <option>Birthday</option>
         <option>Anniversary</option>
       </select>
-      <input type="submit" value="Make Your reservation" />
+      <input type="submit" value="Make Your reservation" onClick={handleSubmit}/>
     </form>
+    </div>
+    </div>
   );
 }
 

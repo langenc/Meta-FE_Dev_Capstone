@@ -27,6 +27,7 @@ function Reservations() {
 
   function initializeTimes() {
     const today = new Date();
+    
     const formattedDate = today.toISOString().substring(0, 10);
 
     //Spring Boot webserver is developed and running local. All requests are fired there.
