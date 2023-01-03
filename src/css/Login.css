@@ -1,5 +1,5 @@
 /* Horizontal grid */
-.flex-container {
+.login-flex-container {
   display: flex;
   flex-direction: column;
   background-color: #495e57;
@@ -7,7 +7,7 @@
   align-items: center;
   justify-content: center;
 }
-.flex-item-1 {
+.login-flex-item-1 {
   flex: 1;
 }
 label {
@@ -15,4 +15,15 @@ label {
 }
 form {
     margin-top: 50px;
+    margin-bottom: 50px;
+}
+.loginButton {
+    margin-top: 50px;
+    color: #495E57;
+    font-size: 18px;
+    font-weight: bold;
+    height: 50px;
+    border-radius: 10px;
+    border: 0px;
+    background-color: #F4CE14;
 }

@@ -22,8 +22,8 @@ function Login() {
 
   return (
     <>
-      <div className="flex-container">
-        <div className="flex-item flex-item-1">
+      <div className="login-flex-container">
+        <div className="flex-item login-flex-item-1">
           <form onSubmit={handleSubmit}>
             <label htmlFor="username">Username:</label>
             <input
@@ -42,8 +42,7 @@ function Login() {
               onChange={(event) => setPassword(event.target.value)}
               className="form-control"
             />
-            <br />
-            <button type="submit" className="button">
+            <button type="submit" className="loginButton">
               Log in
             </button>
             {error && <div>{error}</div>}
