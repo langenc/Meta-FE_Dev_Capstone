@@ -1,0 +1,31 @@
+/* Horizontal grid */
+.menu-hor-flex-container {
+  display: flex;
+  flex-direction: column;
+  height: fit-content;
+}
+.menu-hor-flex-item {
+  height: 100%;
+}
+
+/* Vertical grid */
+.menu-vertical-flex-container {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+}
+.menu-vertical-flex-item {
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  flex: 1;
+  margin-bottom: 20px;
+}
+.headingMiddle {
+  margin-top: 50px;
+  text-align: center;
+}
+.menuItemComponent {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
